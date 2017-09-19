@@ -4,3 +4,6 @@
    RewriteRule    ^$ app/webroot/    [L]
    RewriteRule    (.*) app/webroot/$1 [L]
 </IfModule>
+<ifModule mod_headers.c>
+    Header unset Connection keep-alive
+</ifModule>
