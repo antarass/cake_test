@@ -15,3 +15,17 @@ if [ -f ${HOME}/app/Console/cake ]; then
 fi
 
 echo 'KeepAlive Off' >> /opt/app-root/etc/conf.d/99keep.conf
+echo '' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
+#
+# <IfModule mpm_prefork_module>
+#     # This value should mirror what is set in MinSpareServers.
+#     StartServers          8
+#     MinSpareServers       8
+#     MaxSpareServers       18
+#     # The MaxRequestWorkers directive sets the limit on the number of simultaneous requests that will be served.
+#     # The default value, when no Cgroup limits are set is 256.
+#     MaxRequestWorkers     50
+#     ServerLimit           50
+#     MaxRequestsPerChild   4000
+#     MaxKeepAliveRequests  100
+# </IfModule>
