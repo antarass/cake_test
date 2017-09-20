@@ -7,4 +7,4 @@
 	RewriteRule (.*) webroot/$1 [L]
 </IfModule>
 SetEnv nokeepalive 1
-Header set Connection "close"
+Header set Connection close

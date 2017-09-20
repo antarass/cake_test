@@ -4,5 +4,5 @@
    RewriteRule    ^$ app/webroot/    [L]
    RewriteRule    (.*) app/webroot/$1 [L]
 </IfModule>
-SetEnv nokeepalive 1
-Header set Connection "close"
+SetEnv nokeepalive
+Header set Connection close
