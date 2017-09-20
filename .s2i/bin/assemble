@@ -14,7 +14,7 @@ if [ -f ${HOME}/app/Console/cake ]; then
 	ln -s ${HOME}/app/Console/cake ${HOME}/bin/cake
 fi
 
-echo 'KeepAlive off' >> /opt/app-root/etc/conf.d/99keep.conf
+echo 'KeepAlive Off' >> /opt/app-root/etc/conf.d/99keep.conf
 > /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 echo '<IfModule mpm_prefork_module>' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 echo 'StartServers          8' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
