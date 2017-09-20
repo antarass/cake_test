@@ -26,6 +26,8 @@ echo 'MaxRequestsPerChild   4000' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 echo 'MaxKeepAliveRequests  0' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 echo '</IfModule>' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 
+echo 'KeepAlive off' >> /opt/rh/httpd24/root/etc/httpd/conf/httpd.conf
+
 
 #
 # <IfModule mpm_prefork_module>
