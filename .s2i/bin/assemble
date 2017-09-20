@@ -26,10 +26,6 @@ echo 'MaxRequestsPerChild   4000' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 # echo 'MaxKeepAliveRequests  0' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 echo '</IfModule>' >> /opt/app-root/etc/conf.d/50-mpm-tuning.conf
 
-chown 1004980000.root /opt/app-root/etc/conf.d/50-mpm-tuning.conf
-chown 1004980000.root /opt/app-root/etc/conf.d/99keep.conf
-
-
 #
 # <IfModule mpm_prefork_module>
 #     # This value should mirror what is set in MinSpareServers.
